@@ -1,1 +1,33 @@
 <!DOCTYPE html>
+<html>
+<head> 
+  <meta charset="utf-8">
+  <title>Présentation</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/theme/white.css">
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+        
+    </div>
+    <div class="slide-number" id="slide-number"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.1.0/dist/reveal.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true
+    });
+
+    function updateSlideNumber() {
+      const currentIndex = Reveal.getIndices().h + 1; // Slide indices start at 0
+      const totalSlides = Reveal.getTotalSlides();
+      document.getElementById('slide-number').textContent = `${currentIndex} / ${totalSlides}`;
+    }
+
+    Reveal.on('slidechanged', updateSlideNumber);
+    Reveal.on('ready', updateSlideNumber);
+  </script>
+</body>
+</html>
