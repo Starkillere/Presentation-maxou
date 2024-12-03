@@ -74,6 +74,121 @@
     .plan ul ul li::before {
       content: "\25E6"; /* Unicode for circle bullet point */
     }
+
+    table {
+      width: 90%; /* Ajuste la largeur */
+      margin: 0 auto; /* Centre la table */
+      border-collapse: collapse; /* Fusionne les bordures */
+      font-size: 1rem; /* Taille du texte */
+      background-color: #2e2e2e; /* Couleur de fond globale de la table */
+      color: #f0f0f0; 
+    }
+    th, td {
+      border: 1px solid #555; 
+      padding: 8px 12px; 
+      text-align: center; 
+    }
+    th {
+      background-color: #4a4a4a; 
+      font-weight: bold; 
+      color: #ffdd57; 
+    }
+    tbody tr:nth-child(even) {
+      background-color: #3a3a3a; 
+    }
+    tbody tr:nth-child(odd) {
+      background-color: #444; 
+    }
+    tbody tr:hover {
+      background-color: #555; 
+      color: #fff; 
+    }
+
+    .custom-paragraph {
+      position: relative;
+      margin: 20px auto;
+      padding: 20px 20px 20px 40px;
+      border-left: 5px solid #ff6347;
+      background-color: #333;
+      color: #f0f0f0;
+      border-radius: 8px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .custom-paragraph::before {
+      content: "# ";
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #ffdd57;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+    }
+
+    .custom-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #ffdd57;
+      margin-bottom: 10px;
+    }
+
+    .custom-paragraph p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .block {
+      background-color: #d15501;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .arrow {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 10px 0;
+    }
+    .highlight {
+      color: #0c0402;
+      font-weight: bold;
+    }
+    .bullet {
+      margin: 10px 0;
+    }
+    .box {
+      border: 2px solid #ccc;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+    .box h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .box p, .box ul {
+      margin: 10px 0;
+      font-size: 1rem;
+    }
+    .box-1 {
+      border-color: #4CAF50;
+      background-color: #333;;
+    }
+    .box-2 {
+      border-color: #2196F3;
+      background-color: #333;;
+    }
+    .box-3 {
+      border-color: #FFC107;
+      background-color: #333;;
+    }
+    .box-4 {
+      border-color: #FF5722;
+      background-color: #333;;
+    }
   </style>
 </head>
 <body>
@@ -141,24 +256,217 @@
 
        <!--SLide 3.3-->
        <section>
-        <h2 style="color: #FFFFFF; font-size: 50px;">Poursuite d’études</h2>
-        <p>Après une classe préparatoire, intégrée ou non, vous avez la possibilité de poursuivre en master (bac+5), puis éventuellement en doctorat (bac+8). Mais également de poursuivre en licence, ou dans des universités à l’étranger.</p>
+        <div class="custom-paragraph">
+          <div class="custom-title">Poursuite d’études</div>
+          <p>
+            Après une classe préparatoire, intégrée ou non, vous avez la possibilité de poursuivre en master (bac+5), puis éventuellement en doctorat (bac+8). Mais également de poursuivre en licence, ou dans des universités à l’étranger.
+          </p>
+        </div>
+       </section>
+       <!--end-->
+       <!--SLide 3.4-->
+       <section class="slide">
+        <div class="block">
+          <h2><span class="highlight">Mathématiques</span></h2>
+          <p>Programme identique à la <span class="highlight">MPSI</span>.</p>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="arrow">⬇️</div>
+        <div class="block">
+          <h2><span class="highlight">Physique</span></h2>
+          <p>Basé sur le programme de première. En fin d'année, les <span class="highlight">connaissances</span> sont alignées avec celles de la MPSI.</p>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="arrow">⬇️</div>
+        <div class="block">
+          <h2><span class="highlight">Informatique</span></h2>
+          <p>Remplace la chimie. Programme beaucoup plus <span class="highlight">complet</span> qu'en MPSI.</p>
+          <p><a href="#" style="color: #3498db;">Voir la description détaillée</a></p>
+        </div>
+      </section>
+      <section class="slide">
+        <div class="arrow">⬇️</div>
+        <div class="block">
+          <h2><span class="highlight">Autres Matières</span></h2>
+          <p><span class="highlight">LV2 :</span> Facultative (1 ou 2 heures).</p>
+          <p><span class="highlight">Sport :</span> Facultatif dans la majorité des lycées.</p>
+          <p>La plupart des élèves conservent une <span class="highlight">activité extrascolaire</span> pour diversifier leur journée !</p>
+        </div>
+      </section>
+       <!--end-->
+       <!--SLide 3.5-->
+       <section>
+        <table><thead><tr><th style="text-align:center">Option</th><th style="text-align:center">Maths</th><th style="text-align:center">Physique</th><th style="text-align:center">Chimie</th><th style="text-align:center">Info</th><th style="text-align:center">SI</th><th style="text-align:center">TIPE</th><th style="text-align:center">LV1</th><th style="text-align:center">Philo-Lettres</th></tr></thead><tbody><tr><td style="text-align:center">Informatique</td><td style="text-align:center">12</td><td style="text-align:center">6.5</td><td style="text-align:center">0</td><td style="text-align:center">6</td><td style="text-align:center">0</td><td style="text-align:center">2</td><td style="text-align:center">2</td><td style="text-align:center">2</td></tr><tr><td style="text-align:center">SI</td><td style="text-align:center">12</td><td style="text-align:center">6.5</td><td style="text-align:center">2</td><td style="text-align:center">2</td><td style="text-align:center">4</td><td style="text-align:center">2</td><td style="text-align:center">2</td><td style="text-align:center">2</td></tr></tbody></table>
+       </section>
+       <!--end--> 
+       <!--SLide 3.6-->
+       <section>
+        <img src="https://prepas-mp2i.fr/images/deuxieme_annee.svg" alt="">
+       </section>
+      <!--end--> 
+       <!--SLide 3.7-->
+       <section>
+          <h2 style="color: #FFFFFF; font-size: 50px;">Les concours</h2>
+       </section>
+       <!--end-->
+       <!--SLide 3.8-->
+       <section>
+        <table>
+          <thead>
+            <tr>
+              <th>Classement</th>
+              <th>Concours</th>
+              <th>Épreuves</th>
+              <th>Coefficient</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="highlight">1</td>
+              <td class="highlight">X (École polytechnique)</td>
+              <td>Écrit : Maths, Physique, Chimie, Informatique, Philosophie, Anglais<br>Oral : Mathématiques, Physique, Chimie, Informatique, TIPE</td>
+              <td>1.5 - 5 (selon la matière)</td>
+            </tr>
+            <tr>
+              <td class="highlight">2</td>
+              <td class="highlight">CentraleSupélec</td>
+              <td>Écrit : Maths, Physique, Chimie, Informatique, Philosophie, Anglais<br>Oral : Mathématiques, Physique, Chimie, Informatique, TIPE</td>
+              <td>1.5 - 3</td>
+            </tr>
+            <tr>
+              <td class="highlight">3</td>
+              <td class="highlight">MIN-Ponts</td>
+              <td>Écrit : Maths, Physique, Chimie, Informatique, Philosophie, Anglais<br>Oral : Mathématiques, Physique, Chimie, Informatique, TIPE</td>
+              <td>1.5 - 3</td>
+            </tr>
+            <tr>
+              <td class="highlight">4</td>
+              <td class="highlight">CCINP</td>
+              <td>Écrit : Maths, Physique, Chimie, Informatique, Philosophie, Anglais<br>Oral : Mathématiques, Physique, Chimie, TIPE</td>
+              <td>1.5 - 3</td>
+            </tr>
+            <tr>
+              <td class="highlight">5</td>
+              <td class="highlight">E3A</td>
+              <td>Écrit : Maths, Physique, Chimie, Philosophie, Anglais<br>Oral : Mathématiques, Physique, Chimie, TIPE</td>
+              <td>1.5 - 3</td>
+            </tr>
+          </tbody>
+        </table>
        </section>
        <!--end-->
        </section>
        <!--end-->
+      
+       
+       
        <!--SLide 4-->
        <section>
           <!--Slide 4.1-->
-          <section>
-            <h2 style="color: #FFFFFF; font-size: 50px;">1er année : MP2I</h2>
-          </section>
+                <!-- Slide 1: Introduction -->
+      <section class="slide">
+        <h2 style="color: #FFFFFF; font-size: 50px;">Qu'est-ce qu'une école d'ingénieurs en informatique en France ?</h2>
+        <div class="box box-1">
+          <p>Les écoles d'ingénieurs en informatique en France forment des experts capables de concevoir, développer et gérer des systèmes informatiques complexes. Elles offrent une formation approfondie en sciences informatiques, mais aussi en management, communication et innovation.</p>
+        </div>
+      </section>
+
+      <!-- Slide 2: Première Année -->
+      <section class="slide">
+        <h2 style="color: #FFFFFF; font-size: 50px;">Première année</h2>
+        <div class="box box-2">
+          <h3 style="color: #d40d0d; font-size: 50px;">Contenu de la première année :</h3>
+          <ul>
+            <li class="bullet"><span class="highlight">Mathématiques avancées</span> : Algèbre, analyse, probabilités.</li>
+            <li class="bullet"><span class="highlight">Physique</span> : Mécanique, électromagnétisme.</li>
+            <li class="bullet"><span class="highlight">Informatique</span> : Algorithmique, programmation en C/C++, bases de la logique et de l'architecture des ordinateurs.</li>
+            <li class="bullet"><span class="highlight">Introduction à la gestion</span> : Management et organisation des projets.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 3: Deuxième Année -->
+      <section class="slide">
+        <h2 style="color: #FFFFFF; font-size: 50px;">Deuxième année</h2>
+        <div class="box box-3">
+          <h3 style="color: #d40d0d; font-size: 50px;">Contenu de la deuxième année :</h3>
+          <ul>
+            <li class="bullet"><span class="highlight">Programmation avancée</span> : C++, Java, Python et développement logiciel.</li>
+            <li class="bullet"><span class="highlight">Systèmes et réseaux</span> : Administration des systèmes, réseaux informatiques et sécurité.</li>
+            <li class="bullet"><span class="highlight">Bases de données</span> : Conception, SQL, optimisation.</li>
+            <li class="bullet"><span class="highlight">Algorithmique avancée</span> : Structures de données, complexité des algorithmes.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Slide 4: Troisième Année -->
+      <section class="slide">
+        <h2 style="color: #FFFFFF; font-size: 50px;">Troisième année</h2>
+        <div class="box box-4">
+          <h3 style="color: #d40d0d; font-size: 50px;">Contenu de la troisième année :</h3>
+          <ul>
+            <li class="bullet"><span class="highlight">Choix de spécialité</span> : Intelligence artificielle, data science, cybersécurité, etc.</li>
+            <li class="bullet"><span class="highlight">Stage en entreprise</span> : Expérience pratique pour appliquer les compétences acquises.</li>
+            <li class="bullet"><span class="highlight">Projets de fin d'étude</span> : Réalisation de projets complexes en groupe ou individuellement.</li>
+            <li class="bullet"><span class="highlight">Préparation à la vie professionnelle</span> : Gestion de projet, communication et techniques de présentation.</li>
+          </ul>
+        </div>
+      </section>
           <!--end-->
-          <!--SLide 4.2-->
-          <section>
-            
-          </section>
-          <!--end-->
+       </section>
+       <!--end-->
+
+       <!--SLide 5-->
+       <section>
+        <h2 style="color: #FFFFFF; font-size: 50px;">Les métiers après un diplôme d'ingénieur en informatique</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Métier</th>
+              <th>Description</th>
+              <th>Compétences requises</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="highlight">Développeur logiciel</td>
+              <td>Conçoit, développe et maintient des applications logicielles.</td>
+              <td>Programmation, analyse algorithmique, gestion de projet.</td>
+            </tr>
+            <tr>
+              <td class="highlight">Ingénieur en cybersécurité</td>
+              <td>Assure la sécurité des systèmes informatiques et des réseaux.</td>
+              <td>Sécurité des réseaux, cryptographie, analyse des vulnérabilités.</td>
+            </tr>
+            <tr>
+              <td class="highlight">Chef de projet informatique</td>
+              <td>Gère la planification et l'exécution des projets informatiques.</td>
+              <td>Gestion de projet, communication, leadership.</td>
+            </tr>
+            <tr>
+              <td class="highlight">Data scientist</td>
+              <td>Analyse et interprète des données pour aider à la prise de décisions.</td>
+              <td>Statistiques, programmation en Python/R, machine learning.</td>
+            </tr>
+            <tr>
+              <td class="highlight">Ingénieur en systèmes et réseaux</td>
+              <td>Conçoit, implémente et maintient des infrastructures informatiques.</td>
+              <td>Administration des systèmes, réseaux, sécurité.</td>
+            </tr>
+            <tr>
+              <td class="highlight">Consultant en technologie</td>
+              <td>Conseille les entreprises sur l'intégration de solutions informatiques.</td>
+              <td>Analyse des besoins, communication, expertise technique.</td>
+            </tr>
+            <tr>
+              <td class="highlight">Architecte logiciel</td>
+              <td>Conçoit l'architecture des systèmes logiciels complexes.</td>
+              <td>Architecture logicielle, modélisation, analyse des besoins.</td>
+            </tr>
+          </tbody>
+        </table>
        </section>
        <!--end-->
     <div class="slide-number" id="slide-number"></div>
